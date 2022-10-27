@@ -2,8 +2,13 @@ import {StatusBar} from 'expo-status-bar';
 import {FlatList, ScrollView, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import ChatListItem from "./src/components/ChatListItem";
 import chats from './assets/data/chats.json';
+import ChatsScreen from "./src/components/screens/chatsScreen";
+import ChatScreen from "./src/components/screens/ChatScreen";
+import Message from "./src/components/Message";
+
 /*
 * https://notjust.notion.site/WhatsApp-2-0-a26f46f6770b4b9a81cad19f1f119a3c?p=d9c0e080231b44b19ed96d666c6848bd&pm=s
+* https://plugins.jetbrains.com/plugin/15016-react-native-console-free/versions
 * */
 
 const chat = {
@@ -19,9 +24,8 @@ const chat = {
 };
 
 export default function App() {
-    var loop = []
-    getMoviesFromApi().then(console.log)
-    for (var i = 0; i < 20; i++) {
+   /* var loop = []
+    for (let i = 0; i < 20; i++) {
         loop.push(
             <View>
                 <TouchableOpacity>
@@ -29,10 +33,13 @@ export default function App() {
                 </TouchableOpacity>
             </View>
         )
-    }
+    }*/
     return (
-        <View>
-            <FlatList data={chats} renderItem={({item}) => <ChatListItem chat={item}/>}/>
+        <View style={styles.container}>
+            {/*<ChatsScreen/>*/}
+            {/*<ChatScreen/>*/}
+            <ChatScreen message={"kldanvjksbjkn"}/>
+            {/*<FlatList data={chats} renderItem={({item}) => <ChatListItem chat={item}/>}/>*/}
         </View>
     );
 }
@@ -40,9 +47,11 @@ export default function App() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
+        // alignItems: 'center',
         justifyContent: 'center',
+        paddingTop:30,
+        paddingBottom:0,
+        backgroundColor:'#a2ff7b'
     },
 });
 
