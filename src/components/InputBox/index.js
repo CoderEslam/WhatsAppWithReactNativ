@@ -2,26 +2,29 @@ import {Text, TextInput, View} from "react-native";
 import {StyleSheet} from 'react-native';
 import {AntDesign, MaterialIcons} from '@expo/vector-icons'
 import {useState} from "react";
+import {SafeAreaView} from "react-native-safe-area-context";
 
 export default function InputBox({}) {
 
     const [newMessage, setNewMessage] = useState('');
-
+    const sendAttachment = () => {
+        console.warn('send Attachment')
+    }
     const onSend = () => {
         console.warn('sended', newMessage)
         setNewMessage('');
     }
 
     return (
-        <View style={styles.container}>
+        <SafeAreaView edges={['bottom']} style={styles.container}>
             {/*Icon*/}
-            <AntDesign name={'plus'} size={24} color={'royalblue'}/>
+            <AntDesign name={'plus'} size={24} color={'royalblue'} onPress={sendAttachment}/>
             {/*Text Input*/}
             <TextInput placeholder={'type your massage .....'} style={styles.input} value={newMessage}
                        onChangeText={setNewMessage}/>
             {/*Icon*/}
             <MaterialIcons name={'send'} size={24} color={'white'} style={styles.send} onPress={onSend}/>
-        </View>
+        </SafeAreaView>
     )
 }
 

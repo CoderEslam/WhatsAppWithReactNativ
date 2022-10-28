@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {ImageBackground, Text, View} from 'react-native';
-import bg from '../../../assets/image/BG.png'
 import {StyleSheet} from 'react-native';
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
