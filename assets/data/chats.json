@@ -141,5 +141,18 @@
       "text": "Here is a picture of Mark.",
       "createdAt": "2020-09-27T15:40:00.000Z"
     }
+  },
+  {
+    "id": "12",
+    "user": {
+      "id": "u8",
+      "name": "Eslam",
+      "image": "https://firebasestorage.googleapis.com/v0/b/menuapp-a9ad6.appspot.com/o/Images%2F3jzmbz6GcocRitbDCNvc3EnleBx1.jpg?alt=media&token=45e9d620-8f7a-4266-9cf5-4e8eff173d69"
+    },
+    "lastMessage": {
+      "id": "m8",
+      "text": "hello , How are you?",
+      "createdAt": "2020-09-27T15:40:00.000Z"
+    }
   }
 ]
